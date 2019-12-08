@@ -1,0 +1,34 @@
+<div class="site">
+  <div class="site-content">
+    <div class="container-fluid">
+      <nav class="navbar navbar-expand">
+        <div class="col-sm-3 col-md-9 col-lg-9">
+            <h3>Herolo weather</h3>
+        </div>
+        <div class="navbar-nav col-12 col-3 float-right">
+          <a class="nav-item nav-link" [routerLink]="['/home']" routerLinkActive="active"><i
+               class="d-none d-sm-inline-block fas fa-home mx-1"></i>Home</a>
+          <a class="nav-item nav-link" [routerLink]="['/favorite']" routerLinkActive="active"><i
+               class="d-none d-sm-inline-block fas fa-images mx-1"></i>Favorite</a>
+        </div>
+      </nav>
+    </div>
+    <main class="main-content container">
+      <router-outlet></router-outlet>
+    </main>
+  </div>
+  <footer class="footer container-fluid">
+    <div class="row">
+      <div class="col-12 col-sm-6">
+        <p>Copyright © 2019 Omri Katz</p>
+      </div>
+      <div class="col-12 col-sm-6">
+        <ul class="social-icons float-right mt-3">
+          <li><a class="fab fa-facebook"></a></li>
+          <li><a class="fab fa-twitter"></a></li>
+          <li><a class="fas fa-envelope-open-text"></a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</div>
