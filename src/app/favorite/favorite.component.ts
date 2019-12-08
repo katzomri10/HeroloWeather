@@ -22,4 +22,14 @@ export class FavoriteComponent implements OnInit {
     }
   }
 
+  deleteFavorite(countryKey){
+      for(let i = 0; i < this.favoriteList.length; i++) {
+        if (this.favoriteList[i].details.Key === countryKey) {
+            this.favoriteList.splice(i, 1);
+            break;
+        }
+      }
+      localStorage.setItem("favoriteList", JSON.stringify(this.favoriteList));
+  }
+
 }

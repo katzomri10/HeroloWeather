@@ -2,15 +2,12 @@
 <div class="row">
     <div class="col-12 col-sm-6 col-md-6 col-lg-3" *ngFor="let favorite of favoriteList">
         <mat-card class="card-main-favorite">
-                <mat-card-header class="mx-5">
-                    <mat-card-title>
-                        {{favorite.details.LocalizedName}} ,{{favorite.details.Country.LocalizedName}} ,{{favorite.details.AdministrativeArea.LocalizedName}}
-                    </mat-card-title>
-                    <mat-card-subtitle>
+                <mat-card-content>
+                        <h2>{{favorite.details.LocalizedName}}</h2>
                         <h3>{{favorite.currentWeather[0].Temperature.Imperial.Value}} F</h3>
                         <h5>{{favorite.currentWeather[0].WeatherText}}</h5>
-                    </mat-card-subtitle>
-                </mat-card-header>
+                    <a class="fa fa-trash mx-4 my-3 fa-2x d-none d-md-none d-lg-block float-right" (click)="deleteFavorite(favorite.details.Key)"></a>
+            </mat-card-content>
         </mat-card>
     </div>
 </div>
